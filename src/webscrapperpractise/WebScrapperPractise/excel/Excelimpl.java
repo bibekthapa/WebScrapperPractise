@@ -1,4 +1,4 @@
-package excelpractise.ExcelPractise;
+package webscrapperpractise.WebScrapperPractise.excel;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -22,7 +22,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Excelimpl {
 
-    public  void writeinexcelfile(String param1,String param2,int i) throws IOException {
+    public  void writeinexcelfile(Map m1) throws IOException {
         
         
         
@@ -38,9 +38,9 @@ public class Excelimpl {
             
             
           
-            HSSFRow row = sheet.createRow((short)i);
-            row.createCell(0).setCellValue(param1);
-            row.createCell(1).setCellValue(param2);
+            HSSFRow row = sheet.createRow((short)1);
+            row.createCell(0).setCellValue(m1.containsKey(0));
+            row.createCell(1).setCellValue(m1.containsKey(1));
            
            
             
